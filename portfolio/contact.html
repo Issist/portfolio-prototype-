@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="go_back">
+        <a href="index.html"> &lt; go back</a>
+    </div>
+    <header class="header">
+        <div class="line ">
+            <div class="rect blur"></div>
+        </div>
+        <h2 class="header__h2 blur" >Contact me</h2>
+        <div class="line">
+            <div class="rect blur"></div>
+        </div>
+    </header>
+   
+    <form action="https://formspree.io/f/mgebwdlp" method="POST" class="contact_form">
+        <div class="info">
+        <label for="Email-Address">Email:</label>
+        <input type="email" name="Email-Address" placeholder="jayendraawasthi06@gmail.com" required>
+        </div>
+        <div class="info">
+        <label for="Email-Address">Subject:</label>
+        <input type="text" name="Subject" placeholder="Something something" required>
+        </div>
+        <div class="info">
+        <label for="Email-Address">Content:</label>
+        <textarea name="Message"  rows="5" placeholder="Something something something" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+    <div class="contact">
+        <a href="#"><img src="./assets/git.svg" alt="github"></a>
+        <a href="#"><img src="./assets/inst.svg" alt="instagram"></a>
+        <a href="#"><img src="./assets/in.svg" alt="linkedin"></a>
+        <a href="#"><img src="./assets/be.svg" alt="be"></a>
+    </div>
+
+</body>
+</html>

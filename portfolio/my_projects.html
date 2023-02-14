@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    
+    <link rel="stylesheet" href="my_projects.css">
+</head>
+<body>
+    <section class="social">
+        <a href="contact.html">contact me</a>
+    </section>
+    <header class="header">
+        <div class="line ">
+            <div class="rect blur"></div>
+        </div>
+        <h2 class="header__h2 blur" >My projects</h2>
+        <div class="line">
+            <div class="rect blur"></div>
+        </div>
+    </header>
+ <!--    <section class="contact">
+        <a href="#"><img src="./assets/git.svg" alt="github"></a>
+        <a href="#"><img src="./assets/inst.svg" alt="instagram"></a>
+        <a href="#"><img src="./assets/in.svg" alt="linkedin"></a>
+        <a href="#"><img src="./assets/be.svg" alt="be"></a>
+    </section> -->
+
+
+    <section class="description ">
+        <div class="show blur">
+            <div class=" corner corner-top"><img src="./assets/border-top.png"></div>
+            <p>CLICK<br /> to open</p>
+            <div class="corner corner-bottom"><img src="./assets/border-bottom.png"></div>
+        </div>
+        <!-- SWIPER -->
+        <div class="hide slider">
+            <div class=" corner corner-top"><img src="./assets/border-top.png"></div>
+                    <div class="swiper-slide">
+                        <h1>1Lorem ipsum dolor sit amet.</h1>
+                        <div class="overview">
+                            <a href=""><img src="./assets/git.svg" alt=""></a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolore alias, laudantium repudiandae fuga praesentium ea inventore et ut nisi rerum asperiores non quis aliquam nulla ducimus enim in esse.</p>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <h1>2Lorem ipsum dolor sit amet.</h1>
+                        <div class="overview">
+                            <a href=""><img src="./assets/git.svg" alt=""></a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolore alias, laudantium repudiandae fuga praesentium ea inventore et ut nisi rerum asperiores non quis aliquam nulla ducimus enim in esse.</p>
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <h1>3Lorem ipsum dolor sit amet.</h1>
+                        <div class="overview">
+                            <a href=""><img src="./assets/git.svg" alt=""></a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolore alias, laudantium repudiandae fuga praesentium ea inventore et ut nisi rerum asperiores non quis aliquam nulla ducimus enim in esse.</p>
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <h1>4Lorem ipsum dolor sit amet.</h1>
+                        <div class="overview">
+                            <a href=""><img src="./assets/git.svg" alt=""></a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolore alias, laudantium repudiandae fuga praesentium ea inventore et ut nisi rerum asperiores non quis aliquam nulla ducimus enim in esse.</p>
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <h1>5Lorem ipsum dolor sit amet.</h1>
+                        <div class="overview">
+                            <a href=""><img src="./assets/git.svg" alt=""></a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolore alias, laudantium repudiandae fuga praesentium ea inventore et ut nisi rerum asperiores non quis aliquam nulla ducimus enim in esse.</p>
+                        </div>
+                        
+                    </div>
+                <div class="corner corner-bottom"><img src="./assets/border-bottom.png"></div>
+           
+        </div> 
+        <div class="arrows">
+            <a class="prev" onclick="plusSlides(-1)"><img src="./assets/arrow-left.png" alt=""></a>
+            <a class="next" onclick="plusSlides(1)"><img src="./assets/arrow-right.png" alt=""></a>
+        </div>
+        
+
+    </section>
+
+
+
+    <footer class="footer">
+        <a href="./index.html">
+            <img class="image"   src="./assets/footer-left.png">
+        </a>
+    </footer>
+    
+    <script>
+        const desc = document.querySelector(".description");
+        const show = document.querySelector(".show");
+        const hide = document.querySelector(".hide"); 
+        const arrows = document.querySelector(".arrows");
+
+        var open = false;
+        show.addEventListener("click", () =>{
+            if (!open)
+                arrows.style.display = 'block';
+                show.style.display = 'none';
+                hide.style.display = 'block';
+/*                 desc.style.left = 'calc(40vw - 155px)';
+ */                desc.style.margin = "8vh auto 0 auto";
+                open = true
+        });
+        hide.addEventListener("click", () =>{
+            if (open)
+            arrows.style.display = 'none';
+                hide.style.display = 'none';
+                show.style.display = 'block';
+                open = false
+/*                 desc.style.left = 'calc(50vw - 75px)';
+ */                desc.style.margin = "12vh auto 0 auto";
+        }); 
+
+        window.addEventListener('keydown', e => {
+            if (e.key === 'Enter'){
+                window.location.replace('./my_skills.html')
+            }
+        })
+    </script>
+    <script>
+        
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("swiper-slide");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        
+        slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
+
+    
+</body>
+</html>

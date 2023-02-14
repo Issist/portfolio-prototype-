@@ -1,0 +1,177 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/* ===== FONTS ===== */
+@font-face{
+    font-family: 'star';
+    src: url(./fonts/Death\ Star.otf);
+    font-weight: 400;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url(./fonts/BebasNeue-Regular.ttf);
+}
+/* ====== END OF FONTS ======== */
+
+:root{
+    --fd: 'Bebas Neue', cursive;;
+    --font: star, sans-serif;
+    --main-color: #CEB7FF;
+    --debas: #FFFFFF;
+    --fs1: 3rem;
+    --fs2: 1.3rem;
+    --fs3: 2rem;
+}
+/*====== UTILITY ======*/
+.img, img{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 1px var(--main-color);    
+    background-image: url(./assets/back_skills.png  );
+    background-size: auto 120vh;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position-x: 50%;
+}
+
+.blur{
+    filter:drop-shadow(0 0 1px var(--main-color));
+}
+/* ===== END OF UTILITY ======= */
+
+/* ===============HEADER ===============*/
+.header{
+    text-align: center;
+    font-family: star, sans-serif;
+    margin-top: 10vh;
+    letter-spacing: 0.1rem; 
+    
+}
+
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: var(--fs2);
+}
+
+.header__h2{
+    font-size: var(--fs1);
+    margin-bottom: 7px;
+}
+
+.rect{
+    width: 240px;
+    height: 18px;
+    border: 1px solid var(--main-color);
+    box-shadow: 0 0 2px 1px var(--main-color);
+}
+
+/* =======HEADER END ========== */
+
+
+/* ======= CONTACT ============ */
+.contact{
+    display:inline-flex;
+    flex-direction: column;
+    gap: 35px;
+    position: absolute;
+    left: 30px;
+    top: 20vh;
+}
+
+.contact img{
+    width: 2vw;
+}
+
+/* ===== END OF CONTACT ======== */
+
+
+
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 5vh;
+}
+
+.skills img{
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.square{
+    padding: 0 15px;
+}
+.skill{
+    background-color: rgba(0, 0, 0, 0.4);
+   /*  padding: 20px; */
+   border: 2px solid var(--main-color);
+}
+
+/* ======== LINK ======= */
+.link{
+    text-transform: uppercase;
+    font-family: star, sans-serif;
+    -webkit-text-stroke: 1px var(--debas);
+    font-size: var(--fs3);
+    text-align: center ;
+    margin: 12vh auto 0 auto;
+    position: absolute;
+    left: calc(50vw - 75px);
+    color: var(--font);
+}
+
+.corner{
+    position: absolute;
+    width: 61.39px;
+    height: 54.47px;
+    
+}
+.blur p{
+    margin: 0 15px;
+}
+
+.corner-top{   
+    top: -2rem;
+    left: -1rem;   
+}
+
+.corner-bottom{
+    bottom: -3.5rem;
+    right: -1.5rem;
+}
+
+
+
+
+/* ======= FOOTER ======= */
+.footer{
+    /* margin: 510px 30px 0 30px;
+    display: flex;
+    justify-content: right;    */
+    position: absolute;
+    top: 85vh;
+    right: 10px;
+}
+
+footer .image{
+   width: 50px;
+}
+
+/* ======= END OF FOOTER ======= */
